@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function EpisodeChard(props) {
+export default function EpisodeCard(props) {
   const episode = props.episode;
   console.log(episode);
   return (

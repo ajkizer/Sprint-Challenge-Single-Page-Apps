@@ -20,7 +20,7 @@ export default function CharacterList() {
       <section className="character-list grid-view">
         {keys.map(key => {
           return (
-            <div className="card-container">
+            <div className="card-container-characters">
               <CharacterCard char={chars[key]} />
             </div>
           );

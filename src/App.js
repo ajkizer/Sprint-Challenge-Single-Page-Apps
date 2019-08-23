@@ -6,29 +6,17 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import CharacterList from "./components/CharacterList";
 import EpisodeList from "./components/EpisodeList";
-import LocationList from "./components/LocationsList";
+import LocationList from "./components/LocationList";
 
 export default function App() {
-  const [locations, setLocations] = useState("");
-
-  useEffect(() => {
-    axios
-      .get("https://rickandmortyapi.com/api/location/")
-      .then(res => setLocations(res.data.results));
-  }, []);
-
   return (
     <Router>
       <main>
-        {/* <TabNav /> */}
+        <TabNav />
         <Header />
         <Route path="/episodes" component={EpisodeList} />
         <Route path="/characters" component={CharacterList} />
-        <Route
-          path="/locations"
-          component={LocationList}
-          locations={locations}
-        />
+        <Route path="/locations" component={LocationList} />
       </main>
     </Router>
   );
