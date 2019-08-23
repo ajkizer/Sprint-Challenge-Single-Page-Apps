@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import CharacterList from "./components/CharacterList";
 import EpisodeList from "./components/EpisodeList";
 import LocationList from "./components/LocationList";
+import Home from "./components/Home";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <main>
         <TabNav />
         <Header />
+        <Route exact path="/" component={Home} />
         <Route path="/episodes" component={EpisodeList} />
         <Route path="/characters" component={CharacterList} />
         <Route path="/locations" component={LocationList} />
